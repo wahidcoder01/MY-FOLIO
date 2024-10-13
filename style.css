@@ -1,0 +1,485 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+a{
+   text-decoration: none;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
+}
+.container{
+    width:1170px;
+    margin: auto;
+}
+:root{
+    --yellow--:#cfc91d;
+    --white--:#ffffff;
+    --font-family:"Open Sans", sans-serif;
+    --nav-color:#02918b
+      
+}
+
+
+
+/* NAV START */
+
+
+
+nav{
+    background-color:var(--nav-color);
+    
+}
+
+nav .row{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+nav ul li {
+    display: inline-block;
+    
+    
+}
+nav ul li a{
+    padding: 26px 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family:"Open Sans", sans-serif;
+    font-weight: 800;
+    color:var(--white--);
+    position:relative;
+    
+       
+}
+nav ul li a::after{
+    content:'';
+    position:absolute;
+    width:0%;
+    height: 5px;
+    background: var(--yellow--);
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+    
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* /////// */
+
+nav .menu{
+    position: absolute;
+    background-color:#405151;
+    width:250px;
+    opacity: 0;
+    transition: 0.5s;
+    visibility: hidden;
+    margin-top: 100px;
+    
+}
+nav .parent{
+    position: relative;
+}
+nav .menu li{
+    width:100%;
+
+}
+nav .menu li a{
+    display: block;
+    width: 100%;
+    color:var(--white--);
+    text-align: center;
+}
+
+nav .parent:hover .menu{
+    opacity:1;
+    visibility: visible;
+    margin-top: 0;
+}
+/* ///////// */
+
+
+/* NAV END */
+
+/* BANNER START */
+
+
+#banner{
+    background-image: url(./img/banner.png);
+    height: 730px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    color: var(--white--);
+
+}
+#banner .row{
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 730px;
+    
+}
+#banner .row h4{
+    font-size: 30px;
+    font-family: var(--font-family);
+    font-weight: 400;
+
+}
+#banner .row h1{
+    font-size:68px;
+    font-family: var(--font-family);
+    font-weight: 800;
+    letter-spacing: 16px;
+    text-transform: uppercase;
+
+}
+#banner .row p{
+    font-size: 18px;
+    font-family: var(--font-family);
+    font-weight: 400;
+}
+#banner .row img{
+    margin:50px;
+
+}
+#banner .row a{
+     padding: 20px 40px;
+     display: inline-block;
+     background: #cfc91d;
+     font-family: var(--font-family);
+     font-size: 17px;
+     font-weight:800;
+     text-transform: uppercase;
+     color: black;
+     position: relative;
+}
+
+/* //////// */
+
+#banner .row a::before{
+    content: '';
+    position: absolute;
+    transition: 0.5s;
+    width: 0%;
+    height: 0%;   
+    border-top: 2px solid var(--white--);
+    left: -15px;
+    top: -10px;
+    
+}
+
+#banner .row a::after{
+    content: '';
+    position: absolute;
+    transition: 0.5s;
+    width: 0%;
+    height: 0%;
+    border-left: 2px solid var(--white--);
+    left: -10px;
+    top: -15px;
+    
+}
+#banner .row a:hover::after{
+    width: 110%;
+    height: 100%;
+}
+#banner .row a:hover::before{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* BANNER END */
+
+
+
+
+
+/* about st */
+
+#about{
+    margin:100px 0 ;
+}
+
+#about .header{
+    text-align: center;
+}
+#about .header h2{
+    color: var(--nav-color);
+    font-size: 46px;
+    font-family: var(--font-family);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+#about .header span{
+    color:#7e8287;
+}
+
+#about .header p{
+    font-size: 16px;
+    color: #7e8287;
+    font-family: var(--font-family);
+    font-weight: 400;
+    line-height: 30px;
+    padding: 0 135px;
+}
+#about .header p b{
+    font-size: 23px;
+    font-weight:800 ;
+}
+#about .row{
+    margin-top: 100px;
+}
+
+#about .card{
+ width: 25%;
+ text-align: center;
+ border-right: 1px solid #7e828755;
+ 
+}
+ /* card st */
+#about .card h4{
+   margin: 30px;
+   font-size: 16px;
+   font-weight: 800;
+   color: #7e8287;
+   font-family: var(--font-family);
+}
+#about .card p{
+    font-family: var(--font-family);
+    font-size: 11px;
+    font-weight: 400;
+    color: #7e8287;
+    padding: 0 60px;
+    line-height: 25px;
+}
+#about .card:last-child{
+    border-right: 0px solid #7e828755;
+}
+#services .header h2{
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    font-size: 46px;
+    font-weight: 800;
+    color: var(--nav-color);
+}
+#services .header span{
+    color: #999d9e;
+}
+#services .header p{
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    color: #868b8e;
+}
+/* card end */
+/* about end */
+
+
+/* services st */
+
+#service .row{
+   width: 50%;
+}
+#service .row .service_box{
+     width: 50%;
+}
+
+#service{
+   margin: 100px 0;
+   background-repeat: no-repeat;
+   background-size:cover;
+   background-position: center;
+   padding: 80px;
+}
+#service .header{
+    width: 50%;
+}
+#service .header h2{
+    font-family: var(--font-family);
+    text-transform: uppercase;
+    color: var(--nav-color);
+    font-size: 46px;
+    font-weight: 800;
+    padding-bottom: 20px;
+
+}
+#service .header span{
+    color: #7e8287;
+}
+#service .header p{
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    color:#7e8287;
+    padding: 40px 0;
+}
+#service .service_box h4{
+     font-size: 16px;
+     font-family: var(--font-family);
+     font-weight: 800;
+     color: #405151d3;
+     padding: 24px 0 ;
+} 
+#service .service_box p{
+    font-size: 11px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    padding-bottom: 30px;
+    padding-right: 10px;
+    color: #7e8287;
+    line-height: 25px;
+}
+   /* service end */
+
+
+/* word st */
+
+#work .header{
+    text-align: center;
+}
+#work .header h3{
+    font-family: var(--font-family);
+    font-size: 46px;
+    font-weight: 800;
+    color: var(--nav-color);
+    text-transform: uppercase;
+
+}
+#work .header span{
+    color: #7e8287;
+    
+
+}
+#work .header p{
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    color: #7e8287;
+    padding: 20px 230px;
+}
+#work .work_img{
+    width: 25%;
+    position: relative;
+}
+#work .work_img img{
+    display:block;
+    width: 100%;
+    
+}
+
+#work .work_img .contains{
+    background-color:var(--nav-color) ;
+    position: absolute;
+    inset: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(0);
+
+
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+}
+
+#work .work_img:hover .contains{
+    visibility: visible;
+    opacity: 0.8;
+    transform: scale(1);
+    
+}
+
+#work .contains h4{
+    font-size: 16px;
+    font-family: var(--font-family);
+    font-weight: 800;
+    color: var(--white--);
+    padding-bottom: 10px;
+}
+#work .contains p{
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--white--);
+    
+}
+/* work end */
+
+
+
+/* contact st */
+
+#contact{
+    text-align: center;
+    margin: 97px 0;
+}
+#contact h5{
+    font-family: var(--font-family);
+    font-size: 46px;
+    font-weight: 800;
+    color: var(--nav-color);
+    text-transform: uppercase;
+}
+#contact span{
+    color: #7e8287;
+}
+#contact p{
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    color: #7e8287;
+    padding: 20px 230px;
+}
+/* work end */
+#last_section{
+    background-color:#0a0a0b;
+    
+    
+}
+
+#last_section h6{
+    text-transform: uppercase;
+    color: #7e8287;
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    line-height:80px ;
+    font-size: 16px;
+    
+}
+#last_section .btn h5{
+   background-color: #cfc91d;
+   
+   display: flex;
+   justify-content: center;
+   margin: 0 500px;
+   text-transform: uppercase;
+    
+   color:black;
+   text-align: center;
+   font-family: var(--font-family);
+   font-weight: 800;
+   line-height:40px ;
+   font-size: 16px;
+   margin-bottom: 45px;
+}
+#last_section .icon{
+    background-color:#000000;
+   
+}
